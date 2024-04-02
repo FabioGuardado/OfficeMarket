@@ -1,0 +1,25 @@
+﻿@using OfficeMarket.DataAccessLayer.Models
+
+@{
+    ViewBag.Title = "Listado de Productos";
+    List<Producto> productos = ViewBag.productos;
+}
+
+<div class="container">
+    <div class="row">
+        <h2>Productos</h2>
+    </div>
+    <div class="row">
+        <table>
+            <tr>
+                <th>Nombre</th>
+            </tr>
+            @foreach (var producto in productos)
+            {
+                <tr>
+                    <td>@producto.Nombre</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
